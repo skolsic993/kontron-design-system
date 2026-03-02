@@ -1,0 +1,363 @@
+/* @import must be first (CSS spec); Exo 2 fallback when local Kontron is not available */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+
+@custom-variant dark (&:is(.dark *));
+
+/* -------------------------------------------------------
+   Kontron Brand Fonts (Exo 2.0 variant)
+   Body/copy:  Kontron Light (300)
+   Headlines: Kontron Regular (400) / Medium (500)
+   Emphasis:  Kontron Bold (700)
+   ------------------------------------------------------- */
+
+/* Local Kontron font files from assets/fonts */
+@font-face {
+  font-family: "Kontron";
+  src: url("../assets/fonts/Kontron-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kontron";
+  src: url("../assets/fonts/Kontron-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kontron";
+  src: url("../assets/fonts/Kontron-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kontron";
+  src: url("../assets/fonts/Kontron-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kontron";
+  src: url("../assets/fonts/Kontron-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Kontron Color Palette - Primary Blues */
+  --kontron-blue: #005083;
+  --kontron-blue-dark: #003d64;
+  --kontron-blue-darker: #002a46;
+  --kontron-blue-light: #4d8cb1;
+  --kontron-blue-lighter: #99b8cf;
+  --kontron-blue-pale: #e5f0f6;
+
+  /* Kontron Color Palette - Primary Greens */
+  --kontron-green: #3fb498;
+  --kontron-green-dark: #2f8a73;
+  --kontron-green-darker: #1f5d4d;
+  --kontron-green-light: #6fcdb4;
+  --kontron-green-lighter: #9fddc9;
+  --kontron-green-pale: #e6f7f3;
+
+  /* Kontron Color Palette - Neutrals */
+  --kontron-black: #000000;
+  --kontron-gray-dark: #4d4d4d;
+  --kontron-gray: #808080;
+  --kontron-gray-light: #b3b3b3;
+  --kontron-gray-lighter: #e6e6e6;
+  --kontron-white: #ffffff;
+
+  /* Kontron Color Palette - Complementary Colors */
+  --kontron-magenta: #e4007f;
+  --kontron-magenta-light: #f266af;
+  --kontron-cyan: #00bcd4;
+  --kontron-cyan-light: #66d9e8;
+
+  /* Kontron Gradients */
+  --kontron-gradient-linear: linear-gradient(135deg, #005083 0%, #3fb498 100%);
+  --kontron-gradient-diagonal: linear-gradient(45deg, #005083 0%, #3fb498 100%);
+
+  /* Typography — Kontron for body (Light), headlines (Regular/Medium), emphasis (Bold) */
+  --font-primary:
+    "Kontron", "Exo 2", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-secondary: "Calibri", "Inter", Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+
+  /* Font Weight Scale */
+  --font-weight-thin: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Typography Sizes */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-4xl: 2.25rem; /* 36px */
+  --text-5xl: 3rem; /* 48px */
+
+  /* Design System Tokens - Mapped to Kontron colors */
+  --font-size: 16px;
+  --background: var(--kontron-white);
+  --foreground: var(--kontron-black);
+  --card: var(--kontron-white);
+  --card-foreground: var(--kontron-black);
+  --popover: var(--kontron-white);
+  --popover-foreground: var(--kontron-black);
+  --primary: var(--kontron-blue);
+  --primary-foreground: var(--kontron-white);
+  --secondary: var(--kontron-green);
+  --secondary-foreground: var(--kontron-white);
+  --muted: var(--kontron-gray-lighter);
+  --muted-foreground: var(--kontron-gray-dark);
+  --accent: var(--kontron-blue-light);
+  --accent-foreground: var(--kontron-white);
+  --destructive: #d4183d;
+  --destructive-foreground: var(--kontron-white);
+  --border: var(--kontron-gray-lighter);
+  --input: transparent;
+  --input-background: transparent;
+  --input-border: var(--kontron-gray-lighter);
+  --switch-background: var(--kontron-gray-light);
+  --ring: var(--kontron-blue);
+  --chart-1: var(--kontron-blue);
+  --chart-2: var(--kontron-green);
+  --chart-3: var(--kontron-magenta);
+  --chart-4: var(--kontron-cyan);
+  --chart-5: var(--kontron-blue-light);
+  --radius: 0.375rem;
+  /* Primary button: no border, sharp rectangular corners (0), no shadow — flat like Default Primary row */
+  --button-radius: 0;
+  --button-font-size: 1rem; /* 16px — primary actions */
+  --button-font-size-sm: 0.875rem; /* 14px — labels / secondary */
+  --sidebar: var(--kontron-blue-darker);
+  --sidebar-foreground: var(--kontron-white);
+  --sidebar-primary: var(--kontron-blue);
+  --sidebar-primary-foreground: var(--kontron-white);
+  --sidebar-accent: var(--kontron-blue-dark);
+  --sidebar-accent-foreground: var(--kontron-white);
+  --sidebar-border: var(--kontron-blue-dark);
+  --sidebar-ring: var(--kontron-green);
+}
+
+/* Linear-style dark: main #1C1C1E, surfaces #2A2A2D — app colors unchanged */
+.dark {
+  --background: #1c1c1e;
+  --foreground: var(--kontron-white);
+  --card: #2a2a2d;
+  --card-foreground: var(--kontron-white);
+  --popover: #2a2a2d;
+  --popover-foreground: var(--kontron-white);
+  --primary: var(--kontron-blue-light);
+  --primary-foreground: var(--kontron-white);
+  --secondary: var(--kontron-green-light);
+  --secondary-foreground: var(--kontron-black);
+  --muted: #333333;
+  --muted-foreground: var(--kontron-gray-light);
+  --accent: var(--kontron-blue);
+  --accent-foreground: var(--kontron-white);
+  --destructive: #ef4444;
+  --destructive-foreground: var(--kontron-white);
+  --border: #404040;
+  --input: transparent;
+  --input-background: transparent;
+  --input-border: #404040;
+  --ring: var(--kontron-green);
+  --chart-1: var(--kontron-blue-light);
+  --chart-2: var(--kontron-green-light);
+  --chart-3: var(--kontron-magenta-light);
+  --chart-4: var(--kontron-cyan-light);
+  --chart-5: var(--kontron-blue);
+  --sidebar: #0f0f0f;
+  --sidebar-foreground: var(--kontron-white);
+  --sidebar-primary: var(--kontron-blue);
+  --sidebar-primary-foreground: var(--kontron-white);
+  --sidebar-accent: #2a2a2d;
+  --sidebar-accent-foreground: var(--kontron-white);
+  --sidebar-border: #404040;
+  --sidebar-ring: var(--kontron-green);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-input-border: var(--input-border);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-light); /* Kontron Light for body/copy */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Kontron across the app: body text Light, headlines Regular/Medium, emphasis Bold */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  li,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  th,
+  td {
+    font-family: var(--font-primary);
+  }
+
+  /* Body text: Kontron Light (300) */
+  p,
+  span,
+  li,
+  td {
+    font-weight: var(--font-weight-light);
+  }
+
+  /* Headlines: Kontron Regular (400); use font-medium (500) for product names / stronger headlines */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: var(--font-weight-normal);
+  }
+
+  /* Code / monospace elements */
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-mono);
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  /* Headlines use Kontron Regular (400); labels/buttons use Medium (500) for prominence */
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Design system titles — Kontron, aligned across all sections */
+.ds-page-title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+}
+.ds-section-title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+}
+.ds-card-title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+}
