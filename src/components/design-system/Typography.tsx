@@ -14,9 +14,7 @@ export function Typography() {
               >
                 Primary
               </span>
-              <span className="text-muted-foreground text-sm">
-                Corporate brand font
-              </span>
+              <span className="text-muted-foreground text-sm">Brand font</span>
             </div>
             <p
               className="text-4xl"
@@ -77,7 +75,7 @@ export function Typography() {
             </p>
             <p
               className="text-4xl"
-              style={{ fontFamily: "var(--font-secondary)", fontWeight: 600 }}
+              style={{ fontFamily: "var(--font-secondary)", fontWeight: 500 }}
             >
               Calibri SemiBold
             </p>
@@ -194,6 +192,19 @@ export function Typography() {
         <div className="space-y-4 bg-card p-6 rounded-lg border border-border">
           <div>
             <p
+              className="text-lg mb-2"
+              style={{ fontFamily: "var(--font-primary)" }}
+            >
+              Regular body text — Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Kontron · 18px · Normal
+            </p>
+          </div>
+          <div>
+            <p
               className="text-base mb-2"
               style={{ fontFamily: "var(--font-primary)" }}
             >
@@ -220,21 +231,27 @@ export function Typography() {
           </div>
           <div>
             <p
-              className="text-xs mb-2"
-              style={{ fontFamily: "var(--font-primary)" }}
+              className="text-lg mb-2"
+              style={{
+                fontFamily: "var(--font-secondary)",
+                letterSpacing: "-0.01em",
+              }}
             >
-              Extra small text — Lorem ipsum dolor sit amet, consectetur
+              Secondary (Calibri) — Lorem ipsum dolor sit amet, consectetur
               adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua.
             </p>
             <p className="text-sm text-muted-foreground">
-              Kontron · 12px · Normal
+              Calibri · 18px · Normal
             </p>
           </div>
           <div>
             <p
               className="text-base mb-2"
-              style={{ fontFamily: "var(--font-secondary)" }}
+              style={{
+                fontFamily: "var(--font-secondary)",
+                letterSpacing: "-0.01em",
+              }}
             >
               Secondary (Calibri) — Lorem ipsum dolor sit amet, consectetur
               adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
@@ -242,6 +259,22 @@ export function Typography() {
             </p>
             <p className="text-sm text-muted-foreground">
               Calibri · 16px · Normal
+            </p>
+          </div>
+          <div>
+            <p
+              className="text-sm mb-2"
+              style={{
+                fontFamily: "var(--font-secondary)",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              Secondary (Calibri) — Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Calibri · 14px · Normal
             </p>
           </div>
         </div>

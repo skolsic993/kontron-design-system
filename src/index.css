@@ -1263,7 +1263,7 @@
   }
 
   .bg-black\/50 {
-    background-color: #00000080;
+    background-color: #1c1c1c80;
   }
 
   @supports (color: color-mix(in lab, red, red)) {
@@ -1720,8 +1720,8 @@
 
   .shadow-lg {
     --tw-shadow:
-      0 10px 15px -3px var(--tw-shadow-color, #0000001a),
-      0 4px 6px -4px var(--tw-shadow-color, #0000001a);
+      0 10px 15px -3px var(--tw-shadow-color, #1c1c1c1a),
+      0 4px 6px -4px var(--tw-shadow-color, #1c1c1c1a);
     box-shadow:
       var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
       var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -1729,8 +1729,8 @@
 
   .shadow-md {
     --tw-shadow:
-      0 4px 6px -1px var(--tw-shadow-color, #0000001a),
-      0 2px 4px -2px var(--tw-shadow-color, #0000001a);
+      0 4px 6px -1px var(--tw-shadow-color, #1c1c1c1a),
+      0 2px 4px -2px var(--tw-shadow-color, #1c1c1c1a);
     box-shadow:
       var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
       var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -1738,15 +1738,15 @@
 
   .shadow-sm {
     --tw-shadow:
-      0 1px 3px 0 var(--tw-shadow-color, #0000001a),
-      0 1px 2px -1px var(--tw-shadow-color, #0000001a);
+      0 1px 3px 0 var(--tw-shadow-color, #1c1c1c1a),
+      0 1px 2px -1px var(--tw-shadow-color, #1c1c1c1a);
     box-shadow:
       var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
       var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
   .shadow-xs {
-    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, #0000000d);
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, #1c1c1c0d);
     box-shadow:
       var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
       var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -2073,8 +2073,8 @@
   @media (hover: hover) {
     .hover\:shadow-lg:hover {
       --tw-shadow:
-        0 10px 15px -3px var(--tw-shadow-color, #0000001a),
-        0 4px 6px -4px var(--tw-shadow-color, #0000001a);
+        0 10px 15px -3px var(--tw-shadow-color, #1c1c1c1a),
+        0 4px 6px -4px var(--tw-shadow-color, #1c1c1c1a);
       box-shadow:
         var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
         var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -2173,10 +2173,6 @@
     padding-inline: calc(var(--spacing) * 2.5);
   }
 
-  .has-\[\>svg\]\:px-3:has(> svg) {
-    padding-inline: calc(var(--spacing) * 3);
-  }
-
   .has-\[\>svg\]\:px-4:has(> svg) {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -2208,7 +2204,7 @@
   }
 
   .data-\[placeholder\]\:text-muted-foreground[data-placeholder] {
-    color: var(--muted-foreground);
+    color: var(--foreground);
   }
 
   .data-\[side\=bottom\]\:translate-y-1[data-side="bottom"] {
@@ -2725,7 +2721,7 @@
   --kontron-green-light: #6fcdb4;
   --kontron-green-lighter: #9fddc9;
   --kontron-green-pale: #e6f7f3;
-  --kontron-black: #000;
+  --kontron-dark: #000;
   --kontron-gray-dark: #4d4d4d;
   --kontron-gray: gray;
   --kontron-gray-light: #b3b3b3;
@@ -2760,11 +2756,11 @@
   --text-5xl: 3rem;
   --font-size: 16px;
   --background: var(--kontron-white);
-  --foreground: var(--kontron-black);
+  --foreground: var(--kontron-dark);
   --card: var(--kontron-white);
-  --card-foreground: var(--kontron-black);
+  --card-foreground: var(--kontron-dark);
   --popover: var(--kontron-white);
-  --popover-foreground: var(--kontron-black);
+  --popover-foreground: var(--kontron-dark);
   --primary: var(--kontron-blue);
   --primary-foreground: var(--kontron-white);
   --secondary: var(--kontron-green);
@@ -2807,7 +2803,7 @@
   --primary: var(--kontron-blue-light);
   --primary-foreground: var(--kontron-white);
   --secondary: var(--kontron-green-light);
-  --secondary-foreground: var(--kontron-black);
+  --secondary-foreground: var(--kontron-dark);
   --muted: #333;
   --muted-foreground: var(--kontron-gray-light);
   --accent: var(--kontron-blue);

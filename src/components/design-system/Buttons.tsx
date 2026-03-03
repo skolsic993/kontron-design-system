@@ -47,17 +47,17 @@ export function Buttons() {
           </span>
         </h3>
         <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
-          <Button style={fw.bold}>Default Primary</Button>
-          <Button size="sm" style={fw.bold}>
+          <Button style={fw.medium}>Default Primary</Button>
+          <Button size="sm" style={fw.medium}>
             Small
           </Button>
-          <Button size="lg" style={fw.bold}>
+          <Button size="lg" style={fw.medium}>
             Large
           </Button>
-          <Button disabled style={fw.bold}>
+          <Button disabled style={fw.medium}>
             Disabled
           </Button>
-          <Button style={fw.bold}>
+          <Button style={fw.medium}>
             <Plus className="mr-2 h-4 w-4" />
             With Icon
           </Button>
@@ -157,7 +157,7 @@ export function Buttons() {
         </div>
       </div>
 
-      {/* Destructive Buttons — Bold (700) */}
+      {/* Destructive Buttons — Medium (500) */}
       <div className="space-y-4">
         <h3 className="ds-section-title text-xl mb-4">
           Destructive Buttons
@@ -165,7 +165,7 @@ export function Buttons() {
             className="ml-3 text-sm text-muted-foreground"
             style={{ fontWeight: 300 }}
           >
-            Kontron Bold (700)
+            Kontron Bold (500)
           </span>
         </h3>
         <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">

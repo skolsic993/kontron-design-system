@@ -4,9 +4,9 @@ import * as React from "react";
 
 import { cn } from "./utils";
 
-/* Every button: px-8 py-3 rounded-md shadow-md hover:shadow-lg */
+/* Every button: padding 0.5em 2em, rounded-md shadow-md hover:shadow-lg */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap font-medium px-8 py-3 rounded-md shadow-sm hover:shadow-md transition-colors transition-shadow disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background aria-invalid:ring-2 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex items-center justify-center whitespace-nowrap font-medium py-2 px-8 rounded-md shadow-xs hover:shadow-md transition-colors transition-shadow disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background aria-invalid:ring-2 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
     variants: {
       variant: {

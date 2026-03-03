@@ -35,7 +35,7 @@ export function Cards() {
             className="ml-3 text-sm text-muted-foreground"
             style={{ fontWeight: 300 }}
           >
-            values Black (900) · titles Bold (700) · labels Light (300)
+            values Dark (900) · titles Bold (700) · labels Light (300)
           </span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">

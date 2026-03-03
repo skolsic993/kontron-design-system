@@ -65,8 +65,8 @@
   --kontron-green-pale: #e6f7f3;
 
   /* Kontron Color Palette - Neutrals */
-  --kontron-background: #eff5f8;
-  --kontron-black: #000000;
+  --kontron-background: #fbfbfe;
+  --kontron-dark: #050316;
   --kontron-gray-dark: #4d4d4d;
   --kontron-gray: #808080;
   --kontron-gray-light: #b3b3b3;
@@ -113,11 +113,11 @@
   /* Design System Tokens - Mapped to Kontron colors */
   --font-size: 16px;
   --background: var(--kontron-background);
-  --foreground: var(--kontron-black);
+  --foreground: var(--kontron-dark);
   --card: var(--kontron-white);
-  --card-foreground: var(--kontron-black);
+  --card-foreground: var(--kontron-dark);
   --popover: var(--kontron-white);
-  --popover-foreground: var(--kontron-black);
+  --popover-foreground: var(--kontron-dark);
   --primary: var(--kontron-blue);
   --primary-foreground: var(--kontron-white);
   --secondary: var(--kontron-green);
@@ -165,7 +165,7 @@
   --primary: var(--kontron-blue-light);
   --primary-foreground: var(--kontron-white);
   --secondary: var(--kontron-green-light);
-  --secondary-foreground: var(--kontron-black);
+  --secondary-foreground: var(--kontron-dark);
   --muted: #333333;
   --muted-foreground: var(--kontron-gray-light);
   --accent: var(--kontron-blue);
