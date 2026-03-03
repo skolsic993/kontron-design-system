@@ -61,7 +61,7 @@ export function ColorPalette() {
             {group.colors.map((color) => (
               <div key={color.var} className="space-y-2">
                 <div
-                  className="h-24 rounded-lg shadow-md border border-border"
+                  className="h-24 rounded-lg shadow-sm"
                   style={{ backgroundColor: `var(${color.var})` }}
                 />
                 <div className="text-sm">

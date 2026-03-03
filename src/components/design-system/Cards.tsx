@@ -39,7 +39,7 @@ export function Cards() {
           </span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <Card className="border border-border shadow-sm">
+          <Card>
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -87,7 +87,7 @@ export function Cards() {
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm">
+          <Card>
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -135,7 +135,7 @@ export function Cards() {
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm">
+          <Card>
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -183,7 +183,7 @@ export function Cards() {
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm">
+          <Card>
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -244,7 +244,7 @@ export function Cards() {
             titles Bold (700) · row text Normal (400) · meta Light (300)
           </span>
         </h3>
-        <Card className="border border-border shadow-sm">
+        <Card>
           <CardHeader>
             <CardTitle
               style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
@@ -461,7 +461,7 @@ export function Cards() {
             },
             { label: "Pending", value: "5", color: "var(--kontron-cyan)" },
           ].map(({ label, value, color }) => (
-            <Card className="border border-border shadow-sm" key={label}>
+            <Card key={label}>
               <CardContent className="p-4">
                 <div
                   style={{
