@@ -55,7 +55,7 @@ export function Modals() {
             title Bold (700) · description Light (300)
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border">
+        <div className="bg-card p-6 rounded-lg shadow-sm">
           <Dialog>
             <DialogTrigger asChild>
               <Button
@@ -120,7 +120,7 @@ export function Modals() {
             title Bold · labels SemiBold (600) · inputs Normal (400)
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border">
+        <div className="bg-card p-6 rounded-lg shadow-sm">
           <Dialog>
             <DialogTrigger asChild>
               <Button
@@ -262,7 +262,7 @@ export function Modals() {
             titles Bold (700) · descriptions Light (300) · actions Bold (700)
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border">
+        <div className="bg-card p-6 rounded-lg shadow-sm">
           <div className="flex flex-wrap gap-4">
             {/* Confirm Delete */}
             <AlertDialog>
@@ -544,7 +544,7 @@ export function Modals() {
             (300)
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border">
+        <div className="bg-card p-6 rounded-lg shadow-sm">
           <Dialog>
             <DialogTrigger asChild>
               <Button
@@ -657,7 +657,7 @@ export function Modals() {
             headings Bold (700) · body Light (300)
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border space-y-4">
+        <div className="bg-card p-6 rounded-lg shadow-sm space-y-4">
           {[
             {
               icon: (

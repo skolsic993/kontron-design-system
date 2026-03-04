@@ -126,7 +126,7 @@
   --muted-foreground: var(--kontron-gray-dark);
   --accent: var(--kontron-blue-light);
   --accent-foreground: var(--kontron-white);
-  --destructive: #a31d37;
+  --destructive: #993e50;
   --destructive-foreground: var(--kontron-white);
   --border: var(--kontron-gray-lighter);
   --input: transparent;

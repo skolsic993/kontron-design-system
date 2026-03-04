@@ -188,7 +188,7 @@ export function Forms() {
             label SemiBold (600) · content Normal (400)
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border">
+        <div className="bg-card p-6 rounded-lg shadow-sm">
           <div className="space-y-2">
             <Label htmlFor="message" style={labelStyle}>
               Message
@@ -214,7 +214,7 @@ export function Forms() {
             checked label Medium (500) · unchecked Light (300)
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border space-y-4">
+        <div className="bg-card p-6 rounded-lg shadow-sm space-y-4">
           <div className="flex items-center space-x-2">
             <Checkbox id="terms" />
             <Label
@@ -269,10 +269,10 @@ export function Forms() {
             question SemiBold (600) · options Normal (400)
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border">
+        <div className="bg-card p-6 rounded-lg shadow-sm">
           <Label
             className="mb-4 block"
-            style={{ ...labelStyle, fontWeight: 600 }}
+            style={{ ...labelStyle, fontWeight: 500 }}
           >
             Select your preferred contact method:
           </Label>
@@ -309,7 +309,7 @@ export function Forms() {
             on Medium (500) · off Light (300)
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border space-y-4">
+        <div className="bg-card p-6 rounded-lg shadow-sm space-y-4">
           {[
             {
               id: "notifications",
@@ -360,7 +360,7 @@ export function Forms() {
             Kontron onboarding form
           </span>
         </h3>
-        <div className="bg-card p-6 rounded-lg border border-border">
+        <div className="bg-card p-6 rounded-lg shadow-sm">
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
@@ -446,15 +446,15 @@ export function Forms() {
             </div>
             <div className="flex gap-4">
               <Button
-                type="submit"
-                style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
+                type="button"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
               >
                 Submit Form
               </Button>
               <Button
                 type="button"
                 variant="outline"
-                style={{ fontFamily: "var(--font-primary)", fontWeight: 400 }}
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
               >
                 Cancel
               </Button>
