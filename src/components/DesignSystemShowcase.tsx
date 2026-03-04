@@ -59,16 +59,10 @@ export function DesignSystemShowcase() {
                 className="text-xl text-white/80"
                 style={{ fontFamily: "var(--font-primary)", fontWeight: 300 }}
               >
-                Component Library based on PrimeNG — Kontron Font · Kontron
-                Branding
+                Component Library based on PrimeNG — Kontron Branding
               </p>
             </div>
-            <Button
-              onClick={toggleTheme}
-              variant="ghost"
-              size="icon"
-              className="text-white hover:bg-white/20"
-            >
+            <Button onClick={toggleTheme} variant="ghost" size="icon">
               {isDark ? (
                 <Sun className="h-5 w-5" />
               ) : (

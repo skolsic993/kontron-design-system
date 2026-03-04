@@ -1,3 +1,41 @@
+const HEADING_LEVELS = [1, 2, 3, 4, 5, 6] as const;
+
+function HeadingRow({
+  level,
+  size,
+  label,
+  weight,
+}: {
+  level: (typeof HEADING_LEVELS)[number];
+  size: string;
+  label: string;
+  weight: number;
+}) {
+  const HeadingTag = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-4 mb-2">
+        <HeadingTag
+          className="min-w-0"
+          style={{
+            fontSize: size,
+            fontFamily: "var(--font-primary)",
+            fontWeight: weight,
+          }}
+        >
+          Heading {level} — The quick brown fox
+        </HeadingTag>
+        <span className="text-sm text-muted-foreground shrink-0 rounded px-2 py-1 font-mono tabular-nums flex items-center justify-center">
+          — {weight}
+        </span>
+      </div>
+      <p className="text-sm text-muted-foreground">
+        Kontron · {label} · Medium
+      </p>
+    </div>
+  );
+}
+
 export function Typography() {
   return (
     <div className="space-y-12">
@@ -6,7 +44,7 @@ export function Typography() {
         <h3 className="ds-section-title text-xl mb-4">Font Families</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Primary: Kontron */}
-          <div className="bg-card p-6 rounded-lg border border-border space-y-3">
+          <div className="bg-card p-6 rounded-lg shadow-sm space-y-3">
             <div className="flex items-center gap-3 mb-4">
               <span
                 className="px-2 py-0.5 rounded text-xs"
@@ -16,30 +54,30 @@ export function Typography() {
               </span>
               <span className="text-muted-foreground text-sm">Brand font</span>
             </div>
-            <p
-              className="text-4xl"
-              style={{ fontFamily: "var(--font-primary)", fontWeight: 300 }}
-            >
-              Kontron Light
-            </p>
-            <p
-              className="text-4xl"
-              style={{ fontFamily: "var(--font-primary)", fontWeight: 400 }}
-            >
-              Kontron Regular
-            </p>
-            <p
-              className="text-4xl"
-              style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
-            >
-              Kontron Medium
-            </p>
-            <p
-              className="text-4xl"
-              style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
-            >
-              Kontron Bold
-            </p>
+            {[
+              { name: "Kontron Light", weight: 300 },
+              { name: "Kontron Regular", weight: 400 },
+              { name: "Kontron Medium", weight: 500 },
+              { name: "Kontron Bold", weight: 700 },
+            ].map(({ name, weight }) => (
+              <div
+                key={weight}
+                className="flex items-center justify-between gap-4"
+              >
+                <p
+                  className="text-4xl shrink-0"
+                  style={{
+                    fontFamily: "var(--font-primary)",
+                    fontWeight: weight,
+                  }}
+                >
+                  {name}
+                </p>
+                <span className="text-sm text-muted-foreground shrink-0 rounded px-2 py-1 font-mono tabular-nums flex items-center justify-center">
+                  — {weight}
+                </span>
+              </div>
+            ))}
             <p className="text-sm text-muted-foreground mt-2">
               <code className="text-xs bg-muted px-1.5 py-0.5 rounded">
                 --font-primary
@@ -49,7 +87,7 @@ export function Typography() {
           </div>
 
           {/* Secondary: Calibri */}
-          <div className="bg-card p-6 rounded-lg border border-border space-y-3">
+          <div className="bg-card p-6 rounded-lg shadow-sm space-y-3">
             <div className="flex items-center gap-3 mb-4">
               <span
                 className="px-2 py-0.5 rounded text-xs"
@@ -58,33 +96,33 @@ export function Typography() {
                 Secondary
               </span>
               <span className="text-muted-foreground text-sm">
-                Document & UI utility font
+                Secondary font
               </span>
             </div>
-            <p
-              className="text-4xl"
-              style={{ fontFamily: "var(--font-secondary)", fontWeight: 300 }}
-            >
-              Calibri Light
-            </p>
-            <p
-              className="text-4xl"
-              style={{ fontFamily: "var(--font-secondary)", fontWeight: 400 }}
-            >
-              Calibri Regular
-            </p>
-            <p
-              className="text-4xl"
-              style={{ fontFamily: "var(--font-secondary)", fontWeight: 500 }}
-            >
-              Calibri SemiBold
-            </p>
-            <p
-              className="text-4xl"
-              style={{ fontFamily: "var(--font-secondary)", fontWeight: 700 }}
-            >
-              Calibri Bold
-            </p>
+            {[
+              { name: "Calibri Light", weight: 300 },
+              { name: "Calibri Regular", weight: 400 },
+              { name: "Calibri SemiBold", weight: 600 },
+              { name: "Calibri Bold", weight: 700 },
+            ].map(({ name, weight }) => (
+              <div
+                key={weight}
+                className="flex items-center justify-between gap-4"
+              >
+                <p
+                  className="text-4xl shrink-0"
+                  style={{
+                    fontFamily: "var(--font-secondary)",
+                    fontWeight: weight,
+                  }}
+                >
+                  {name}
+                </p>
+                <span className="text-sm text-muted-foreground shrink-0 rounded px-2 py-1 font-mono tabular-nums flex items-center justify-center">
+                  — {weight}
+                </span>
+              </div>
+            ))}
             <p className="text-sm text-muted-foreground mt-2">
               <code className="text-xs bg-muted px-1.5 py-0.5 rounded">
                 --font-secondary
@@ -98,98 +136,50 @@ export function Typography() {
       {/* Headings */}
       <div className="space-y-6">
         <h3 className="ds-section-title text-xl mb-4">Headings</h3>
-        <div className="space-y-4 bg-card p-6 rounded-lg border border-border">
-          <div>
-            <h1
-              className="mb-2"
-              style={{
-                fontSize: "var(--text-5xl)",
-                fontFamily: "var(--font-primary)",
-              }}
-            >
-              Heading 1 — The quick brown fox
-            </h1>
-            <p className="text-sm text-muted-foreground">
-              Kontron · 48px · Medium
-            </p>
-          </div>
-          <div>
-            <h2
-              className="mb-2"
-              style={{
-                fontSize: "var(--text-4xl)",
-                fontFamily: "var(--font-primary)",
-              }}
-            >
-              Heading 2 — The quick brown fox
-            </h2>
-            <p className="text-sm text-muted-foreground">
-              Kontron · 36px · Medium
-            </p>
-          </div>
-          <div>
-            <h3
-              className="mb-2"
-              style={{
-                fontSize: "var(--text-3xl)",
-                fontFamily: "var(--font-primary)",
-              }}
-            >
-              Heading 3 — The quick brown fox
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              Kontron · 30px · Medium
-            </p>
-          </div>
-          <div>
-            <h4
-              className="mb-2"
-              style={{
-                fontSize: "var(--text-2xl)",
-                fontFamily: "var(--font-primary)",
-              }}
-            >
-              Heading 4 — The quick brown fox
-            </h4>
-            <p className="text-sm text-muted-foreground">
-              Kontron · 24px · Medium
-            </p>
-          </div>
-          <div>
-            <h5
-              className="mb-2"
-              style={{
-                fontSize: "var(--text-xl)",
-                fontFamily: "var(--font-primary)",
-              }}
-            >
-              Heading 5 — The quick brown fox
-            </h5>
-            <p className="text-sm text-muted-foreground">
-              Kontron · 20px · Medium
-            </p>
-          </div>
-          <div>
-            <h6
-              className="mb-2"
-              style={{
-                fontSize: "var(--text-lg)",
-                fontFamily: "var(--font-primary)",
-              }}
-            >
-              Heading 6 — The quick brown fox
-            </h6>
-            <p className="text-sm text-muted-foreground">
-              Kontron · 18px · Medium
-            </p>
-          </div>
+        <div className="space-y-4 bg-card p-6 rounded-lg shadow-sm">
+          <HeadingRow
+            level={1}
+            size="var(--text-5xl)"
+            label="48px ( text-5xl class)"
+            weight={500}
+          />
+          <HeadingRow
+            level={2}
+            size="var(--text-4xl)"
+            label="36px ( text-4xl class)"
+            weight={500}
+          />
+          <HeadingRow
+            level={3}
+            size="var(--text-3xl)"
+            label="30px ( text-3xl class)"
+            weight={500}
+          />
+          <HeadingRow
+            level={4}
+            size="var(--text-2xl)"
+            label="24px ( text-2xl class)"
+            weight={500}
+          />
+          <HeadingRow
+            level={5}
+            size="var(--text-xl)"
+            label="20px ( text-xl class)"
+            weight={500}
+          />
+          <HeadingRow
+            level={6}
+            size="var(--text-lg)"
+            label="18px ( text-lg class)"
+            weight={500}
+          />
         </div>
       </div>
 
       {/* Body Text */}
       <div className="space-y-6">
         <h3 className="ds-section-title text-xl mb-4">Body Text</h3>
-        <div className="space-y-4 bg-card p-6 rounded-lg border border-border">
+        <div className="space-y-4 bg-card p-6 rounded-lg shadow-sm">
           <div>
             <p
               className="text-lg mb-2"
@@ -200,7 +190,7 @@ export function Typography() {
               dolore magna aliqua.
             </p>
             <p className="text-sm text-muted-foreground">
-              Kontron · 18px · Normal
+              Kontron · 18px ( text-lg class) · Normal
             </p>
           </div>
           <div>
@@ -213,7 +203,7 @@ export function Typography() {
               dolore magna aliqua.
             </p>
             <p className="text-sm text-muted-foreground">
-              Kontron · 16px · Normal
+              Kontron · 16px ( text-base class) · Normal
             </p>
           </div>
           <div>
@@ -226,7 +216,7 @@ export function Typography() {
               aliqua.
             </p>
             <p className="text-sm text-muted-foreground">
-              Kontron · 14px · Normal
+              Kontron · 14px ( text-sm class) · Normal
             </p>
           </div>
           <div>
@@ -242,7 +232,7 @@ export function Typography() {
               dolore magna aliqua.
             </p>
             <p className="text-sm text-muted-foreground">
-              Calibri · 18px · Normal
+              Calibri · 18px ( text-lg class) · Normal
             </p>
           </div>
           <div>
@@ -258,7 +248,7 @@ export function Typography() {
               dolore magna aliqua.
             </p>
             <p className="text-sm text-muted-foreground">
-              Calibri · 16px · Normal
+              Calibri · 16px ( text-base class) · Normal
             </p>
           </div>
           <div>
@@ -274,7 +264,7 @@ export function Typography() {
               dolore magna aliqua.
             </p>
             <p className="text-sm text-muted-foreground">
-              Calibri · 14px · Normal
+              Calibri · 14px ( text-sm class) · Normal
             </p>
           </div>
         </div>
@@ -285,7 +275,7 @@ export function Typography() {
         <h3 className="ds-section-title text-xl mb-4">
           Font Weights — Kontron
         </h3>
-        <div className="space-y-4 bg-card p-6 rounded-lg border border-border">
+        <div className="space-y-4 bg-card p-6 rounded-lg shadow-sm">
           {[
             { label: "Light (300)", weight: 300 },
             { label: "Normal (400)", weight: 400 },
@@ -314,7 +304,7 @@ export function Typography() {
       {/* Text Colors */}
       <div className="space-y-6">
         <h3 className="ds-section-title text-xl mb-4">Text Colors</h3>
-        <div className="space-y-3 bg-card p-6 rounded-lg border border-border">
+        <div className="space-y-3 bg-card p-6 rounded-lg shadow-sm">
           <p className="text-foreground text-base">
             Foreground — Default text color
           </p>

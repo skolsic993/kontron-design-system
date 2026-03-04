@@ -35,7 +35,7 @@ const fw = {
 export function Buttons() {
   return (
     <div className="space-y-12">
-      {/* Primary Buttons — Bold (700) */}
+      {/* Primary Buttons — Semibold (500) */}
       <div className="space-y-4">
         <h3 className="ds-section-title text-xl mb-4">
           Primary Buttons — Kontron Blue
@@ -43,10 +43,10 @@ export function Buttons() {
             className="ml-3 text-sm text-muted-foreground"
             style={{ fontWeight: 300 }}
           >
-            Kontron Bold (700)
+            Kontron Semibold (500)
           </span>
         </h3>
-        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
+        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg shadow-sm">
           <Button style={fw.medium}>Default Primary</Button>
           <Button size="sm" style={fw.medium}>
             Small
@@ -61,6 +61,10 @@ export function Buttons() {
             <Plus className="mr-2 h-4 w-4" />
             With Icon
           </Button>
+          <Button size="lg" style={fw.medium}>
+            <Plus className="mr-2 h-4 w-4" />
+            With Icon
+          </Button>
         </div>
       </div>
 
@@ -72,23 +76,27 @@ export function Buttons() {
             className="ml-3 text-sm text-muted-foreground"
             style={{ fontWeight: 300 }}
           >
-            Kontron SemiBold (600)
+            Kontron Semibold (500)
           </span>
         </h3>
-        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
-          <Button variant="secondary" style={fw.semibold}>
+        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg shadow-sm">
+          <Button variant="secondary" style={fw.medium}>
             Secondary
           </Button>
-          <Button variant="secondary" size="sm" style={fw.semibold}>
+          <Button variant="secondary" size="sm" style={fw.medium}>
             Small
           </Button>
-          <Button variant="secondary" size="lg" style={fw.semibold}>
+          <Button variant="secondary" size="lg" style={fw.medium}>
             Large
           </Button>
-          <Button variant="secondary" disabled style={fw.semibold}>
+          <Button variant="secondary" disabled style={fw.medium}>
             Disabled
           </Button>
-          <Button variant="secondary" style={fw.semibold}>
+          <Button variant="secondary" style={fw.medium}>
+            <Save className="mr-2 h-4 w-4" />
+            Save Changes
+          </Button>
+          <Button variant="secondary" size="lg" style={fw.medium}>
             <Save className="mr-2 h-4 w-4" />
             Save Changes
           </Button>
@@ -106,7 +114,7 @@ export function Buttons() {
             Kontron Medium (500)
           </span>
         </h3>
-        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
+        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg shadow-sm">
           <Button variant="outline" style={fw.medium}>
             Outline
           </Button>
@@ -137,7 +145,7 @@ export function Buttons() {
             Kontron Normal (400)
           </span>
         </h3>
-        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
+        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg shadow-sm">
           <Button variant="ghost" style={fw.normal}>
             Ghost
           </Button>
@@ -168,20 +176,20 @@ export function Buttons() {
             Kontron Bold (500)
           </span>
         </h3>
-        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
-          <Button variant="destructive" style={fw.bold}>
+        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg shadow-sm">
+          <Button variant="destructive" style={fw.medium}>
             Delete
           </Button>
-          <Button variant="destructive" size="sm" style={fw.bold}>
+          <Button variant="destructive" size="sm" style={fw.medium}>
             Small
           </Button>
-          <Button variant="destructive" size="lg" style={fw.bold}>
+          <Button variant="destructive" size="lg" style={fw.medium}>
             Large
           </Button>
-          <Button variant="destructive" disabled style={fw.bold}>
+          <Button variant="destructive" disabled style={fw.medium}>
             Disabled
           </Button>
-          <Button variant="destructive" style={fw.bold}>
+          <Button variant="destructive" style={fw.medium}>
             <Trash2 className="mr-2 h-4 w-4" />
             Remove Item
           </Button>
@@ -199,7 +207,7 @@ export function Buttons() {
             Kontron Light (300)
           </span>
         </h3>
-        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
+        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg shadow-sm">
           <Button variant="link" style={fw.light}>
             Link Button
           </Button>
@@ -215,7 +223,7 @@ export function Buttons() {
         </div>
       </div>
 
-      {/* Gradient Buttons — Bold (700) */}
+      {/* Gradient Buttons — Semibold (500) */}
       <div className="space-y-4">
         <h3 className="ds-section-title text-xl mb-4">
           Gradient Buttons
@@ -226,25 +234,31 @@ export function Buttons() {
             Kontron Bold (700)
           </span>
         </h3>
-        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
+        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg shadow-sm">
           <button
-            className="px-6 py-2 rounded-md text-white shadow-md hover:shadow-lg transition-all"
-            style={{ background: "var(--kontron-gradient-linear)", ...fw.bold }}
+            className="px-6 py-2 rounded-sm text-white shadow-sm transition-all"
+            style={{
+              background: "var(--kontron-gradient-linear)",
+              ...fw.medium,
+            }}
           >
             Linear Gradient
           </button>
           <button
-            className="px-6 py-2 rounded-md text-white shadow-md hover:shadow-lg transition-all"
+            className="px-6 py-2 rounded-sm text-white shadow-sm transition-all"
             style={{
               background: "var(--kontron-gradient-diagonal)",
-              ...fw.bold,
+              ...fw.medium,
             }}
           >
             Diagonal Gradient
           </button>
           <button
-            className="px-8 py-3 rounded-md text-white shadow-md hover:shadow-lg transition-all"
-            style={{ background: "var(--kontron-gradient-linear)", ...fw.bold }}
+            className="px-8 py-3 rounded-sm text-white shadow-sm transition-all"
+            style={{
+              background: "var(--kontron-gradient-linear)",
+              ...fw.medium,
+            }}
           >
             <Plus className="inline-block mr-2 h-5 w-5" />
             Large with Icon
@@ -252,7 +266,7 @@ export function Buttons() {
         </div>
       </div>
 
-      {/* Complementary Color Buttons — SemiBold (600) */}
+      {/* Complementary Color Buttons — SemiBold (500) */}
       <div className="space-y-4">
         <h3 className="ds-section-title text-xl mb-4">
           Complementary Color Buttons
@@ -263,38 +277,38 @@ export function Buttons() {
             Kontron SemiBold (600)
           </span>
         </h3>
-        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
+        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg shadow-sm">
           <button
-            className="px-6 py-2 rounded-md text-white shadow-md hover:opacity-90 transition-all"
+            className="px-6 py-2 rounded-sm text-white shadow-md hover:opacity-90 transition-all"
             style={{
               backgroundColor: "var(--kontron-magenta)",
-              ...fw.semibold,
+              ...fw.medium,
             }}
           >
             Magenta Button
           </button>
           <button
-            className="px-6 py-2 rounded-md text-white shadow-md hover:opacity-90 transition-all"
-            style={{ backgroundColor: "var(--kontron-cyan)", ...fw.semibold }}
+            className="px-6 py-2 rounded-sm text-white shadow-md hover:opacity-90 transition-all"
+            style={{ backgroundColor: "var(--kontron-cyan)", ...fw.medium }}
           >
             Cyan Button
           </button>
           <button
-            className="px-6 py-2 rounded-md shadow-md hover:opacity-90 transition-all border-2"
+            className="px-6 py-2 rounded-sm shadow-sm hover:opacity-90 transition-all border-2"
             style={{
               borderColor: "var(--kontron-magenta)",
               color: "var(--kontron-magenta)",
-              ...fw.semibold,
+              ...fw.medium,
             }}
           >
             Magenta Outline
           </button>
           <button
-            className="px-6 py-2 rounded-md shadow-md hover:opacity-90 transition-all border-2"
+            className="px-6 py-2 rounded-sm shadow-sm hover:opacity-90 transition-all border-2"
             style={{
               borderColor: "var(--kontron-cyan)",
               color: "var(--kontron-cyan)",
-              ...fw.semibold,
+              ...fw.medium,
             }}
           >
             Cyan Outline
@@ -305,7 +319,7 @@ export function Buttons() {
       {/* Icon Only */}
       <div className="space-y-4">
         <h3 className="ds-section-title text-xl mb-4">Icon Only Buttons</h3>
-        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg border border-border">
+        <div className="flex flex-wrap gap-4 items-center bg-card p-6 rounded-lg shadow-sm">
           <Button size="icon">
             <Plus className="h-4 w-4" />
           </Button>

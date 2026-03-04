@@ -126,7 +126,7 @@
   --muted-foreground: var(--kontron-gray-dark);
   --accent: var(--kontron-blue-light);
   --accent-foreground: var(--kontron-white);
-  --destructive: #d4183d;
+  --destructive: #a31d37;
   --destructive-foreground: var(--kontron-white);
   --border: var(--kontron-gray-lighter);
   --input: transparent;
@@ -234,9 +234,39 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+[data-slot="button"][data-variant="ghost"]:hover {
+  background-color: var(--kontron-blue-pale);
+}
+
+.dark [data-slot="button"][data-variant="ghost"]:hover {
+  background-color: var(--kontron-dark);
+}
+
+[data-slot="button"][data-variant="outline"] {
+  color: var(--kontron-blue-light);
+}
+
+[data-slot="button"][data-variant="outline"]:hover {
+  color: var(--kontron-white);
+}
+
+.dark [data-slot="button"][data-variant="outline"] {
+  color: var(--foreground);
+}
+
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply outline-ring/50;
+    border-color: var(--border);
+  }
+
+  /* Outline button border must win over *; use variable so it’s not overridden by base layer order */
+  [data-slot="button"].border {
+    border-color: var(--kontron-blue-light);
+  }
+
+  .dark [data-slot="button"].border {
+    border-color: var(--input-border);
   }
 
   body {

@@ -49,7 +49,7 @@ export function Forms() {
             labels SemiBold (600) · values Normal (400)
           </span>
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-card p-6 rounded-lg border border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-card p-6 rounded-lg shadow-sm">
           <div className="space-y-2">
             <Label htmlFor="name" style={labelStyle}>
               Full Name
@@ -136,7 +136,7 @@ export function Forms() {
             labels SemiBold (600) · options Normal (400)
           </span>
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-card p-6 rounded-lg border border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-card p-6 rounded-lg shadow-sm">
           <div className="space-y-2">
             <Label htmlFor="country" style={labelStyle}>
               Country
