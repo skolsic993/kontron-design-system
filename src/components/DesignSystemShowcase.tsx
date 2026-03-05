@@ -4,6 +4,7 @@ import { Buttons } from "./design-system/Buttons";
 import { Cards } from "./design-system/Cards";
 import { ColorPalette } from "./design-system/ColorPalette";
 import { Forms } from "./design-system/Forms";
+import { Logo } from "./design-system/Logo";
 import { Modals } from "./design-system/Modals";
 import { Typography } from "./design-system/Typography";
 import { Button } from "./ui/button";
@@ -74,6 +75,7 @@ export function DesignSystemShowcase() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         {[
+          { id: "logo", label: "Logo", child: <Logo /> },
           { id: "colors", label: "Color Palette", child: <ColorPalette /> },
           { id: "typography", label: "Typography", child: <Typography /> },
           { id: "buttons", label: "Buttons", child: <Buttons /> },
