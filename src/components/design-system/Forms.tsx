@@ -462,6 +462,117 @@ export function Forms() {
           </form>
         </div>
       </div>
+
+      {/* Spacing */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Spacing
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            gap in grid & flex · space between elements
+          </span>
+        </h3>
+        <div className="space-y-8 bg-card p-6 rounded-lg shadow-sm">
+          <div>
+            <p className="text-sm mb-3" style={helperText}>
+              Grid with gap (
+              <code className="bg-kontron-blue-pale px-2 rounded-sm">
+                gap-4
+              </code>{" "}
+              - 1rem)
+            </p>
+            <div className="grid grid-cols-3 gap-4 py-4 rounded">
+              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+                1
+              </div>
+              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+                2
+              </div>
+              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+                3
+              </div>
+              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+                4
+              </div>
+              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+                5
+              </div>
+              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+                6
+              </div>
+            </div>
+          </div>
+          <div className="mb-3">
+            <p className="text-sm" style={helperText}>
+              Flex with gap (e.g.{" "}
+              <code className="bg-kontron-blue-pale px-1 rounded">
+                flex gap-3
+              </code>
+              )
+            </p>
+            <div className="flex flex-wrap gap-3 py-4 rounded">
+              <Button
+                variant="secondary"
+                size="sm"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Item A
+              </Button>
+              <Button
+                variant="secondary"
+                size="sm"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Item B
+              </Button>
+              <Button
+                variant="secondary"
+                size="sm"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Item C
+              </Button>
+            </div>
+          </div>
+          <div>
+            <p className="text-sm mb-3" style={helperText}>
+              Space between buttons (e.g.{" "}
+              <code className="bg-kontron-blue-pale px-1 rounded">gap-2</code>,{" "}
+              <code className="bg-kontron-blue-pale px-1 rounded">gap-4</code>)
+            </p>
+            <div className="flex flex-wrap items-center gap-2 mt-4">
+              <Button
+                size="sm"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Primary
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Secondary
+              </Button>
+            </div>
+            <div className="flex flex-wrap items-center gap-4 mt-4">
+              <Button
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Submit
+              </Button>
+              <Button
+                variant="outline"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Cancel
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

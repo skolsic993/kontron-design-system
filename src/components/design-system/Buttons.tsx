@@ -131,6 +131,10 @@ export function Buttons() {
             <Download className="mr-2 h-4 w-4" />
             Download
           </Button>
+          <Button size="lg" variant="outline" style={fw.medium}>
+            <Download className="mr-2 h-4 w-4" />
+            Download
+          </Button>
         </div>
       </div>
 
@@ -162,6 +166,10 @@ export function Buttons() {
             <Edit className="mr-2 h-4 w-4" />
             Edit
           </Button>
+          <Button size="lg" variant="ghost" style={fw.normal}>
+            <Edit className="mr-2 h-4 w-4" />
+            Edit
+          </Button>
         </div>
       </div>
 
@@ -190,6 +198,10 @@ export function Buttons() {
             Disabled
           </Button>
           <Button variant="destructive" style={fw.medium}>
+            <Trash2 className="mr-2 h-4 w-4" />
+            Remove Item
+          </Button>
+          <Button size="lg" variant="destructive" style={fw.medium}>
             <Trash2 className="mr-2 h-4 w-4" />
             Remove Item
           </Button>

@@ -234,6 +234,41 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Kontron palette utilities — use in components (e.g. bg-kontron-blue-pale, text-kontron-blue) */
+.bg-kontron-blue {
+  background-color: var(--kontron-blue);
+}
+.bg-kontron-blue-light {
+  background-color: var(--kontron-blue-light);
+}
+.bg-kontron-blue-pale {
+  background-color: var(--kontron-blue-pale);
+}
+.bg-kontron-green {
+  background-color: var(--kontron-green);
+}
+.bg-kontron-green-pale {
+  background-color: var(--kontron-green-pale);
+}
+.bg-kontron-muted {
+  background-color: var(--muted);
+}
+.text-kontron-blue {
+  color: var(--kontron-blue);
+}
+.text-kontron-blue-light {
+  color: var(--kontron-blue-light);
+}
+.text-kontron-green {
+  color: var(--kontron-green);
+}
+.border-kontron-blue {
+  border-color: var(--kontron-blue);
+}
+.border-kontron-blue-light {
+  border-color: var(--kontron-blue-light);
+}
+
 [data-slot="button"][data-variant="ghost"]:hover {
   background-color: var(--kontron-blue-pale);
 }
