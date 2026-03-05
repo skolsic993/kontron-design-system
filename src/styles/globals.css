@@ -250,6 +250,9 @@
 .text-kontron-green-pale {
   color: var(--kontron-green-pale);
 }
+.text-kontron-green-dark {
+  color: var(--kontron-green-dark);
+}
 .text-kontron-magenta {
   color: var(--kontron-magenta);
 }
@@ -267,6 +270,18 @@
 }
 .bg-kontron-blue-pale {
   background-color: var(--kontron-blue-pale);
+}
+.text-kontron-green-dark {
+  color: var(--kontron-green-dark);
+}
+.bg-kontron-green-light {
+  background-color: var(--kontron-green-light);
+}
+.bg-kontron-green-lighter {
+  background-color: var(--kontron-green-lighter);
+}
+.bg-kontron-green-pale {
+  background-color: var(--kontron-green-pale);
 }
 
 /* Skeleton pulsing animation — works with any background (e.g. bg-accent, bg-kontron-blue-pale) */
@@ -321,6 +336,12 @@
 }
 
 .dark [data-slot="button"][data-variant="outline"] {
+  color: var(--foreground);
+}
+
+/* Active tab: distinct background so it’s visible (Tailwind data-[state=active] may not be in build) */
+[data-slot="tabs-trigger"][data-state="active"] {
+  background-color: var(--muted);
   color: var(--foreground);
 }
 

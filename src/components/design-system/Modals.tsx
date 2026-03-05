@@ -571,9 +571,9 @@ export function Modals() {
               ),
               title: "Success",
               body: "Your action has been completed successfully.",
-              borderColor: "var(--kontron-green)",
-              bgClass: "bg-green-50",
-              titleColor: "var(--kontron-green)",
+              borderColor: "var(--kontron-green-dark)",
+              bgClass: "bg-kontron-green-pale",
+              titleColor: "var(--kontron-green-dark)",
             },
             {
               icon: <AlertCircle className="h-5 w-5 mt-0.5 text-yellow-600" />,
