@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { Buttons } from "./design-system/Buttons";
 import { Cards } from "./design-system/Cards";
 import { ColorPalette } from "./design-system/ColorPalette";
+import { DashboardCards } from "./design-system/dashboard/DashboardCards";
 import { Forms } from "./design-system/Forms";
 import { Logo } from "./design-system/Logo";
 import { Modals } from "./design-system/Modals";
 import { Typography } from "./design-system/Typography";
 import { Button } from "./ui/button";
-import { Card, CardContent } from "./ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 export function DesignSystemShowcase() {
@@ -117,45 +117,20 @@ export function DesignSystemShowcase() {
 
           <TabsContent value="dashboard" className="mt-8">
             <div className="pb-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {[
-                  { label: "Total Projects", value: "24" },
-                  { label: "Completed", value: "18" },
-                  { label: "In Progress", value: "1" },
-                  {
-                    label: "Pending",
-                    value: "5",
-                    color: "var(--kontron-cyan)",
-                  },
-                ].map(({ label, value, color }) => (
-                  <Card key={label}>
-                    <CardContent className="p-4 h-32 flex flex-col items-center justify-center gap-1">
-                      <span
-                        className="text-3xl font-black text-foreground"
-                        style={
-                          color
-                            ? {
-                                fontFamily: "var(--font-primary)",
-                                color,
-                              }
-                            : { fontFamily: "var(--font-primary)" }
-                        }
-                      >
-                        {value}
-                      </span>
-                      <span
-                        className="text-sm text-muted-foreground"
-                        style={{
-                          fontFamily: "var(--font-primary)",
-                          fontWeight: 300,
-                        }}
-                      >
-                        {label}
-                      </span>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              {[
+                {
+                  id: "dashboard",
+                  label: "Dashboard",
+                  child: <DashboardCards />,
+                },
+              ].map(({ id, label, child }) => (
+                <section key={id} id={id} className="mb-16">
+                  <h2 className="ds-page-title text-3xl text-foreground mb-6">
+                    {label}
+                  </h2>
+                  {child}
+                </section>
+              ))}
             </div>
           </TabsContent>
         </Tabs>
