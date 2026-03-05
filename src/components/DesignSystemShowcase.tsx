@@ -5,8 +5,6 @@ import { Cards } from "./design-system/Cards";
 import { ColorPalette } from "./design-system/ColorPalette";
 import { Forms } from "./design-system/Forms";
 import { Modals } from "./design-system/Modals";
-import { Navigation } from "./design-system/Navigation";
-import { Tables } from "./design-system/Tables";
 import { Typography } from "./design-system/Typography";
 import { Button } from "./ui/button";
 
@@ -81,8 +79,6 @@ export function DesignSystemShowcase() {
           { id: "buttons", label: "Buttons", child: <Buttons /> },
           { id: "forms", label: "Form Components", child: <Forms /> },
           { id: "cards", label: "Cards", child: <Cards /> },
-          { id: "navigation", label: "Navigation", child: <Navigation /> },
-          { id: "tables", label: "Tables", child: <Tables /> },
           { id: "modals", label: "Modals & Dialogs", child: <Modals /> },
         ].map(({ id, label, child }) => (
           <section key={id} id={id} className="mb-16">

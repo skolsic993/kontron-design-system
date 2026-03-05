@@ -32,13 +32,13 @@ import {
 import { Textarea } from "../ui/textarea";
 
 /* ─── Kontron weight guide for Modals ────────────────────
-   Dialog / alert titles    → Bold     (700)
+   Dialog / alert titles    → Medium     (500)
    Descriptions             → Light    (300)
    Body / feature text      → Normal   (400)
-   Confirm action buttons   → Bold     (700)
+   Confirm action buttons   → Medium     (500)
    Cancel / secondary btns  → Medium   (500)
-   Form labels inside modal → SemiBold (600)
-   Notification headings    → Bold     (700)
+   Form labels inside modal → SemiMedium (600)
+   Notification headings    → Medium     (500)
 ─────────────────────────────────────────────────────────── */
 
 export function Modals() {
@@ -52,14 +52,14 @@ export function Modals() {
             className="ml-3 text-sm text-muted-foreground"
             style={{ fontWeight: 300 }}
           >
-            title Bold (700) · description Light (300)
+            title Medium (500) · description Light (300)
           </span>
         </h3>
         <div className="bg-card p-6 rounded-lg shadow-sm">
           <Dialog>
             <DialogTrigger asChild>
               <Button
-                style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
               >
                 Open Dialog
               </Button>
@@ -67,7 +67,7 @@ export function Modals() {
             <DialogContent>
               <DialogHeader>
                 <DialogTitle
-                  style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
+                  style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
                 >
                   Dialog Title
                 </DialogTitle>
@@ -99,7 +99,7 @@ export function Modals() {
                   Cancel
                 </Button>
                 <Button
-                  style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
+                  style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
                 >
                   Confirm
                 </Button>
@@ -117,7 +117,7 @@ export function Modals() {
             className="ml-3 text-sm text-muted-foreground"
             style={{ fontWeight: 300 }}
           >
-            title Bold · labels SemiBold (600) · inputs Normal (400)
+            title Medium · labels SemiMedium (600) · inputs Normal (400)
           </span>
         </h3>
         <div className="bg-card p-6 rounded-lg shadow-sm">
@@ -133,7 +133,7 @@ export function Modals() {
             <DialogContent className="sm:max-w-[500px]">
               <DialogHeader>
                 <DialogTitle
-                  style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
+                  style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
                 >
                   Add New User
                 </DialogTitle>
@@ -241,7 +241,7 @@ export function Modals() {
                   Cancel
                 </Button>
                 <Button
-                  style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
+                  style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
                 >
                   Create User
                 </Button>
@@ -259,7 +259,8 @@ export function Modals() {
             className="ml-3 text-sm text-muted-foreground"
             style={{ fontWeight: 300 }}
           >
-            titles Bold (700) · descriptions Light (300) · actions Bold (700)
+            titles Medium (500) · descriptions Light (300) · actions Medium
+            (500)
           </span>
         </h3>
         <div className="bg-card p-6 rounded-lg shadow-sm">
@@ -279,7 +280,7 @@ export function Modals() {
                   <AlertDialogTitle
                     style={{
                       fontFamily: "var(--font-primary)",
-                      fontWeight: 700,
+                      fontWeight: 500,
                     }}
                   >
                     Are you absolutely sure?
@@ -307,7 +308,7 @@ export function Modals() {
                     className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                     style={{
                       fontFamily: "var(--font-primary)",
-                      fontWeight: 700,
+                      fontWeight: 500,
                     }}
                   >
                     Delete
@@ -341,7 +342,7 @@ export function Modals() {
                     <AlertDialogTitle
                       style={{
                         fontFamily: "var(--font-primary)",
-                        fontWeight: 700,
+                        fontWeight: 500,
                       }}
                     >
                       Information
@@ -361,7 +362,7 @@ export function Modals() {
                   <AlertDialogAction
                     style={{
                       fontFamily: "var(--font-primary)",
-                      fontWeight: 700,
+                      fontWeight: 500,
                     }}
                   >
                     Got it
@@ -395,7 +396,7 @@ export function Modals() {
                     <AlertDialogTitle
                       style={{
                         fontFamily: "var(--font-primary)",
-                        fontWeight: 700,
+                        fontWeight: 500,
                       }}
                     >
                       Success!
@@ -416,7 +417,7 @@ export function Modals() {
                       backgroundColor: "var(--kontron-green)",
                       color: "white",
                       fontFamily: "var(--font-primary)",
-                      fontWeight: 700,
+                      fontWeight: 500,
                     }}
                   >
                     Continue
@@ -438,13 +439,13 @@ export function Modals() {
               <AlertDialogContent>
                 <AlertDialogHeader>
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-yellow-100">
-                      <AlertCircle className="h-5 w-5 text-yellow-600" />
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-kontron-blue-pale">
+                      <AlertCircle className="h-5 w-5 text-kontron-blue-dark" />
                     </div>
                     <AlertDialogTitle
                       style={{
                         fontFamily: "var(--font-primary)",
-                        fontWeight: 700,
+                        fontWeight: 500,
                       }}
                     >
                       Warning
@@ -471,7 +472,7 @@ export function Modals() {
                   <AlertDialogAction
                     style={{
                       fontFamily: "var(--font-primary)",
-                      fontWeight: 700,
+                      fontWeight: 500,
                     }}
                   >
                     Proceed Anyway
@@ -499,7 +500,7 @@ export function Modals() {
                     <AlertDialogTitle
                       style={{
                         fontFamily: "var(--font-primary)",
-                        fontWeight: 700,
+                        fontWeight: 500,
                       }}
                     >
                       Error
@@ -520,7 +521,7 @@ export function Modals() {
                     className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                     style={{
                       fontFamily: "var(--font-primary)",
-                      fontWeight: 700,
+                      fontWeight: 500,
                     }}
                   >
                     Close
@@ -532,120 +533,6 @@ export function Modals() {
         </div>
       </div>
 
-      {/* Large Dialog with Gradient Header */}
-      <div className="space-y-4">
-        <h3 className="ds-section-title text-xl mb-4">
-          Large Dialog — Gradient Header
-          <span
-            className="ml-3 text-sm text-muted-foreground"
-            style={{ fontWeight: 300 }}
-          >
-            feature title Bold (700) · features Normal (400) · subtext Light
-            (300)
-          </span>
-        </h3>
-        <div className="bg-card p-6 rounded-lg shadow-sm">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button
-                style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
-              >
-                Open Large Dialog
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[700px]">
-              <div
-                className="absolute inset-x-0 top-0 h-32 rounded-t-lg"
-                style={{ background: "var(--kontron-gradient-linear)" }}
-              />
-              <DialogHeader className="relative pt-24">
-                <DialogTitle
-                  className="text-2xl"
-                  style={{ fontFamily: "var(--font-primary)", fontWeight: 700 }}
-                >
-                  Premium Feature Access
-                </DialogTitle>
-                <DialogDescription
-                  style={{ fontFamily: "var(--font-primary)", fontWeight: 300 }}
-                >
-                  Upgrade your account to unlock all premium features and
-                  capabilities.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="py-6 space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {[
-                    {
-                      title: "Advanced Analytics",
-                      desc: "Get deep insights into your data with advanced reporting tools.",
-                    },
-                    {
-                      title: "Priority Support",
-                      desc: "Get help when you need it with 24/7 priority support.",
-                    },
-                    {
-                      title: "Custom Integrations",
-                      desc: "Connect with your favourite tools and services.",
-                    },
-                    {
-                      title: "Unlimited Users",
-                      desc: "Add as many team members as you need.",
-                    },
-                  ].map(({ title, desc }) => (
-                    <div
-                      className="p-4 rounded-lg border border-border"
-                      key={title}
-                    >
-                      <CheckCircle2
-                        className="h-8 w-8 mb-2"
-                        style={{ color: "var(--kontron-green)" }}
-                      />
-                      <h4
-                        style={{
-                          fontFamily: "var(--font-primary)",
-                          fontWeight: 700,
-                        }}
-                        className="mb-1"
-                      >
-                        {title}
-                      </h4>
-                      <p
-                        style={{
-                          fontFamily: "var(--font-primary)",
-                          fontWeight: 300,
-                          fontSize: "var(--text-sm)",
-                        }}
-                        className="text-muted-foreground"
-                      >
-                        {desc}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <DialogFooter>
-                <Button
-                  variant="outline"
-                  style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
-                >
-                  Maybe Later
-                </Button>
-                <Button
-                  style={{
-                    background: "var(--kontron-gradient-linear)",
-                    color: "white",
-                    fontFamily: "var(--font-primary)",
-                    fontWeight: 700,
-                  }}
-                >
-                  Upgrade Now
-                </Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-        </div>
-      </div>
-
       {/* Notification Styles */}
       <div className="space-y-4">
         <h3 className="ds-section-title text-xl mb-4">
@@ -654,7 +541,7 @@ export function Modals() {
             className="ml-3 text-sm text-muted-foreground"
             style={{ fontWeight: 300 }}
           >
-            headings Bold (700) · body Light (300)
+            headings Medium (500) · body Light (300)
           </span>
         </h3>
         <div className="bg-card p-6 rounded-lg shadow-sm space-y-4">
@@ -714,7 +601,7 @@ export function Modals() {
                     className="mb-1"
                     style={{
                       fontFamily: "var(--font-primary)",
-                      fontWeight: 700,
+                      fontWeight: 500,
                       color: titleColor,
                     }}
                   >

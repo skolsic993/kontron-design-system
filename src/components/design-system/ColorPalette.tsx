@@ -29,7 +29,7 @@ export function ColorPalette() {
     {
       title: "Neutrals",
       colors: [
-        { name: "Dark", var: "--kontron-dark", hex: "#1c1c1c" },
+        { name: "Dark", var: "--kontron-dark", hex: "#050316" },
         { name: "Gray Dark", var: "--kontron-gray-dark", hex: "#4d4d4d" },
         { name: "Gray", var: "--kontron-gray", hex: "#808080" },
         { name: "Gray Light", var: "--kontron-gray-light", hex: "#b3b3b3" },

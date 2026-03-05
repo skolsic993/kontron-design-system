@@ -1263,7 +1263,7 @@
   }
 
   .bg-black\/50 {
-    background-color: #1c1c1c80;
+    background-color: #05031680;
   }
 
   @supports (color: color-mix(in lab, red, red)) {
@@ -1720,8 +1720,8 @@
 
   .shadow-lg {
     --tw-shadow:
-      0 10px 15px -3px var(--tw-shadow-color, #1c1c1c1a),
-      0 4px 6px -4px var(--tw-shadow-color, #1c1c1c1a);
+      0 10px 15px -3px var(--tw-shadow-color, #0503161f),
+      0 4px 6px -4px var(--tw-shadow-color, #0503161f);
     box-shadow:
       var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
       var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -1729,22 +1729,22 @@
 
   .shadow-md {
     --tw-shadow:
-      0 4px 6px -1px var(--tw-shadow-color, #1c1c1c1a),
-      0 2px 4px -2px var(--tw-shadow-color, #1c1c1c1a);
+      0 4px 6px -1px var(--tw-shadow-color, #0503161f),
+      0 2px 4px -2px var(--tw-shadow-color, #0503161f);
     box-shadow:
       var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
       var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
   .shadow-sm {
-    --tw-shadow: 0 1px 1px 0 var(--tw-shadow-color, #1c1c1c0d);
+    --tw-shadow: 0 1px 1px 0 var(--tw-shadow-color, #0503161f);
     box-shadow:
       var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
       var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
   .shadow-xs {
-    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, #1c1c1c0d);
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, #0503160d);
     box-shadow:
       var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
       var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -2071,8 +2071,8 @@
   @media (hover: hover) {
     .hover\:shadow-lg:hover {
       --tw-shadow:
-        0 10px 15px -3px var(--tw-shadow-color, #1c1c1c1a),
-        0 4px 6px -4px var(--tw-shadow-color, #1c1c1c1a);
+        0 10px 15px -3px var(--tw-shadow-color, #0503161f),
+        0 4px 6px -4px var(--tw-shadow-color, #0503161f);
       box-shadow:
         var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
         var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -2772,7 +2772,7 @@
   --border: var(--kontron-gray-lighter);
   --input: transparent;
   --input-background: transparent;
-  --input-border: var(--kontron-gray-lighter);
+  --input-border: var(--kontron-blue);
   --switch-background: var(--kontron-gray-light);
   --ring: var(--kontron-blue);
   --chart-1: var(--kontron-blue);

@@ -102,7 +102,7 @@ export function Typography() {
             {[
               { name: "Calibri Light", weight: 300 },
               { name: "Calibri Regular", weight: 400 },
-              { name: "Calibri SemiBold", weight: 600 },
+              { name: "Calibri SemiBold", weight: 500 },
               { name: "Calibri Bold", weight: 700 },
             ].map(({ name, weight }) => (
               <div
@@ -291,7 +291,7 @@ export function Typography() {
                   fontWeight: weight,
                 }}
               >
-                {label} — The quick brown fox jumps over the lazy dog
+                {label} — The quick brown fox
               </p>
               <p className="text-xs text-muted-foreground">
                 font-weight: {weight}
