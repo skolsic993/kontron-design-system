@@ -125,7 +125,7 @@ export function Modals() {
             <DialogTrigger asChild>
               <Button
                 variant="secondary"
-                style={{ fontFamily: "var(--font-primary)", fontWeight: 600 }}
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
               >
                 Add New User
               </Button>
@@ -440,7 +440,10 @@ export function Modals() {
                 <AlertDialogHeader>
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-10 h-10 rounded-full flex items-center justify-center bg-kontron-blue-pale">
-                      <AlertCircle className="h-5 w-5 text-kontron-blue-dark" />
+                      <AlertCircle
+                        className="h-5 w-5"
+                        style={{ color: "var(--kontron-magenta)" }}
+                      />
                     </div>
                     <AlertDialogTitle
                       style={{

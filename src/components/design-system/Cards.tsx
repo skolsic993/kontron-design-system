@@ -23,41 +23,14 @@ export function Cards() {
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            {
-              label: "Total Projects",
-              value: "127",
-              color: "var(--kontron-blue)",
-            },
-            { label: "Completed", value: "98", color: "var(--kontron-green)" },
-            {
-              label: "In Progress",
-              value: "24",
-              color: "var(--kontron-magenta)",
-            },
+            { label: "Total Projects" },
+            { label: "Completed" },
+            { label: "In Progress" },
             { label: "Pending", value: "5", color: "var(--kontron-cyan)" },
-          ].map(({ label, value, color }) => (
+          ].map(({ label }) => (
             <Card key={label}>
-              <CardContent className="p-4">
-                <div
-                  style={{
-                    fontFamily: "var(--font-primary)",
-                    fontWeight: 300,
-                    fontSize: "var(--text-sm)",
-                  }}
-                  className="text-muted-foreground"
-                >
-                  {label}
-                </div>
-                <div
-                  className="text-3xl mt-1"
-                  style={{
-                    fontFamily: "var(--font-primary)",
-                    fontWeight: 900,
-                    color,
-                  }}
-                >
-                  {value}
-                </div>
+              <CardContent className="p-4 h-32 flex items-center justify-center">
+                Content
               </CardContent>
             </Card>
           ))}

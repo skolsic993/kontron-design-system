@@ -853,6 +853,10 @@
     min-height: 100vh;
   }
 
+  .w-px {
+    width: 1px;
+  }
+
   .w-3 {
     width: calc(var(--spacing) * 3);
   }

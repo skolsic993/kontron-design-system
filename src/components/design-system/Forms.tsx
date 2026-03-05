@@ -1,8 +1,60 @@
-import { Lock, Mail, Search } from "lucide-react";
+import { Info, Lock, Mail, Search } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "../ui/alert-dialog";
+import { Badge } from "../ui/badge";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "../ui/breadcrumb";
 import { Button } from "../ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 import { Checkbox } from "../ui/checkbox";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "../ui/collapsible";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import {
   Select,
@@ -11,8 +63,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { Separator } from "../ui/separator";
+import { Skeleton } from "../ui/skeleton";
 import { Switch } from "../ui/switch";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { Textarea } from "../ui/textarea";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 /* ─── Kontron weight guide for Forms ─────────────────────
    Section headings  → Bold     (700)
@@ -349,6 +405,448 @@ export function Forms() {
         </div>
       </div>
 
+      {/* Alert */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Alert
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            inline messages and callouts
+          </span>
+        </h3>
+        <div className="space-y-4 bg-card p-6 rounded-lg shadow-sm">
+          <Alert className="flex items-start gap-4">
+            <Info className="h-4 w-4 text-kontron-magenta mt-0.5" />
+
+            <div className="flex flex-col">
+              <AlertTitle style={labelStyle}>Default alert</AlertTitle>
+              <AlertDescription style={helperText}>
+                This is a default alert with a title and description.
+              </AlertDescription>
+            </div>
+          </Alert>
+        </div>
+      </div>
+
+      {/* Alert Dialog */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Alert Dialog
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            confirmation dialogs for critical actions
+          </span>
+        </h3>
+        <div className="bg-card p-6 rounded-lg shadow-sm">
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Open Alert Dialog
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle style={labelStyle}>
+                  Are you sure?
+                </AlertDialogTitle>
+                <AlertDialogDescription style={helperText}>
+                  This action cannot be undone. This will permanently delete the
+                  item from the system.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel style={labelStyle}>Cancel</AlertDialogCancel>
+                <AlertDialogAction style={labelStyle}>
+                  Continue
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
+      </div>
+
+      {/* Badge */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Badge
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            labels and status indicators
+          </span>
+        </h3>
+        <div className="flex flex-wrap gap-2 bg-card p-6 rounded-lg shadow-sm">
+          <Badge>Default</Badge>
+          <Badge variant="secondary">Secondary</Badge>
+          <Badge variant="destructive">Destructive</Badge>
+          <Badge variant="outline">Outline</Badge>
+          <Badge variant="ghost">Ghost</Badge>
+        </div>
+      </div>
+
+      {/* Breadcrumb */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Breadcrumb
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            navigation path
+          </span>
+        </h3>
+        <div className="bg-card p-6 rounded-lg shadow-sm">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="#">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="#">Components</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+
+      {/* Card */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Card
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            container with header, content, footer
+          </span>
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Card>
+            <CardHeader>
+              <CardTitle style={labelStyle}>Card title</CardTitle>
+              <CardDescription style={helperText}>
+                Card description goes here.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p style={{ ...inputStyle, fontSize: "var(--text-sm)" }}>
+                Card content area. You can put any content inside.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Button
+                size="sm"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Action
+              </Button>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle style={labelStyle}>Another card</CardTitle>
+              <CardDescription style={helperText}>
+                Secondary card example.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p style={{ ...inputStyle, fontSize: "var(--text-sm)" }}>
+                More content in the second card.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      {/* Collapsible */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Collapsible
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            show/hide content with a trigger
+          </span>
+        </h3>
+        <div className="bg-card p-6 rounded-lg shadow-sm">
+          <Collapsible>
+            <CollapsibleTrigger asChild>
+              <Button
+                variant="ghost"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Toggle content
+              </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent className="pt-4">
+              <p style={{ ...inputStyle, fontSize: "var(--text-sm)" }}>
+                This content is collapsible. It can be shown or hidden by
+                toggling the button above.
+              </p>
+            </CollapsibleContent>
+          </Collapsible>
+        </div>
+      </div>
+
+      {/* Dialog */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Dialog
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            modal overlay for focused content
+          </span>
+        </h3>
+        <div className="bg-card p-6 rounded-lg shadow-sm">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Open Dialog
+              </Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle style={labelStyle}>Dialog title</DialogTitle>
+                <DialogDescription style={helperText}>
+                  This is a dialog. You can put forms or important messages
+                  here.
+                </DialogDescription>
+              </DialogHeader>
+              <DialogFooter>
+                <Button
+                  variant="outline"
+                  style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+                >
+                  Confirm
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        </div>
+      </div>
+
+      {/* Dropdown Menu */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Dropdown Menu
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            context menu triggered by button
+          </span>
+        </h3>
+        <div className="flex flex-wrap gap-4 bg-card p-6 rounded-lg shadow-sm">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="ghost"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Open Menu
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel style={labelStyle}>
+                My Account
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem style={inputStyle}>Profile</DropdownMenuItem>
+              <DropdownMenuItem style={inputStyle}>Settings</DropdownMenuItem>
+              <DropdownMenuItem style={inputStyle}>Logout</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </div>
+
+      {/* Popover */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Popover
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            floating content panel
+          </span>
+        </h3>
+        <div className="bg-card p-6 rounded-lg shadow-sm">
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button
+                variant="ghost"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Open Popover
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent>
+              <div className="space-y-2">
+                <h4 className="font-medium leading-none" style={labelStyle}>
+                  Popover title
+                </h4>
+                <p className="text-sm text-muted-foreground" style={helperText}>
+                  Popover content. Use for settings, filters, or extra info.
+                </p>
+              </div>
+            </PopoverContent>
+          </Popover>
+        </div>
+      </div>
+
+      {/* Separator */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Separator
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            visual divider
+          </span>
+        </h3>
+        <div className="space-y-4 bg-card p-6 rounded-lg shadow-sm">
+          <div>
+            <p className="text-sm mb-2" style={labelStyle}>
+              Section above
+            </p>
+            <Separator className="my-4 h-px" />
+            <p className="text-sm mt-2" style={labelStyle}>
+              Section below
+            </p>
+          </div>
+          <div className="flex h-5 items-center gap-4">
+            <span style={{ ...inputStyle, fontSize: "var(--text-sm)" }}>
+              Item 1
+            </span>
+            <Separator orientation="vertical" className="h-5 w-px" />
+            <span style={{ ...inputStyle, fontSize: "var(--text-sm)" }}>
+              Item 2
+            </span>
+            <Separator orientation="vertical" className="h-5 w-px" />
+            <span style={{ ...inputStyle, fontSize: "var(--text-sm)" }}>
+              Item 3
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Skeleton */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Skeleton
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            loading placeholder
+          </span>
+        </h3>
+        <div className="space-y-4 bg-card p-6 rounded-lg shadow-sm">
+          <div className="flex items-center gap-4">
+            <Skeleton className="h-12 w-12 rounded-full bg-kontron-blue-pale" />
+            <div className="space-y-2 flex-1 w-full">
+              <Skeleton className="h-4 w-full bg-kontron-blue-pale" />
+              <Skeleton className="h-4 w-3/4 bg-kontron-blue-pale" />
+            </div>
+          </div>
+          <Skeleton className="h-24 w-full bg-kontron-blue-pale" />
+        </div>
+      </div>
+
+      {/* Tabs */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Tabs
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            switch between views
+          </span>
+        </h3>
+        <div className="bg-card p-6 rounded-lg shadow-sm">
+          <Tabs defaultValue="tab1">
+            <TabsList>
+              <TabsTrigger value="tab1" style={labelStyle}>
+                Tab 1
+              </TabsTrigger>
+              <TabsTrigger value="tab2" style={labelStyle}>
+                Tab 2
+              </TabsTrigger>
+              <TabsTrigger value="tab3" style={labelStyle}>
+                Tab 3
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="tab1" className="pt-4">
+              <p style={{ ...inputStyle, fontSize: "var(--text-sm)" }}>
+                Content for tab one.
+              </p>
+            </TabsContent>
+            <TabsContent value="tab2" className="pt-4">
+              <p style={{ ...inputStyle, fontSize: "var(--text-sm)" }}>
+                Content for tab two.
+              </p>
+            </TabsContent>
+            <TabsContent value="tab3" className="pt-4">
+              <p style={{ ...inputStyle, fontSize: "var(--text-sm)" }}>
+                Content for tab three.
+              </p>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </div>
+
+      {/* Tooltip */}
+      <div className="space-y-4">
+        <h3 className="ds-section-title text-xl mb-4">
+          Tooltip
+          <span
+            className="ml-3 text-sm text-muted-foreground"
+            style={helperText}
+          >
+            hover hint
+          </span>
+        </h3>
+        <div className="flex flex-wrap gap-4 bg-card p-6 rounded-lg shadow-sm">
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant="ghost"
+                style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
+              >
+                Hover me
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p style={labelStyle}>Tooltip content</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
+      </div>
+
       {/* Complete Form */}
       <div className="space-y-4">
         <h3 className="ds-section-title text-xl mb-4">
@@ -483,23 +981,23 @@ export function Forms() {
               </code>{" "}
               - 1rem)
             </p>
-            <div className="grid grid-cols-3 gap-4 py-4 rounded">
-              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+            <div className="grid grid-cols-3 gap-4 py-4">
+              <div className="h-12 bg-kontron-blue-pale rounded-lg flex items-center justify-center text-sm">
                 1
               </div>
-              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+              <div className="h-12 bg-kontron-blue-pale rounded-lg flex items-center justify-center text-sm">
                 2
               </div>
-              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+              <div className="h-12 bg-kontron-blue-pale rounded-lg flex items-center justify-center text-sm">
                 3
               </div>
-              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+              <div className="h-12 bg-kontron-blue-pale rounded-lg flex items-center justify-center text-sm">
                 4
               </div>
-              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+              <div className="h-12 bg-kontron-blue-pale rounded-lg flex items-center justify-center text-sm">
                 5
               </div>
-              <div className="h-12 bg-kontron-blue-pale rounded flex items-center justify-center text-sm">
+              <div className="h-12 bg-kontron-blue-pale rounded-lg flex items-center justify-center text-sm">
                 6
               </div>
             </div>

@@ -18,7 +18,7 @@ export function Logo() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="space-y-2">
-            <div className="h-24 rounded-lg shadow-sm flex items-center justify-center">
+            <div className="h-24 rounded-lg shadow-sm flex items-center justify-center bg-card">
               <img
                 src={kontronLogo}
                 alt="Kontron full logo"
@@ -35,7 +35,7 @@ export function Logo() {
           </div>
 
           <div className="space-y-2">
-            <div className="h-24 rounded-lg shadow-sm flex items-center justify-center">
+            <div className="h-24 rounded-lg shadow-sm flex items-center justify-center bg-card">
               <img
                 src={smallLogo}
                 alt="Kontron compact mark"
