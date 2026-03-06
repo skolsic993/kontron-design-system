@@ -76,6 +76,7 @@
   /* Kontron Color Palette - Complementary Colors */
   --kontron-magenta: #e4007f;
   --kontron-magenta-light: #f266af;
+  --kontron-magenta-pale: #f9ecf4;
   --kontron-cyan: #00bcd4;
   --kontron-cyan-light: #66d9e8;
 
@@ -127,6 +128,7 @@
   --accent: var(--kontron-blue-light);
   --accent-foreground: var(--kontron-white);
   --destructive: #993e50;
+  --destructive-pale: #f9ecf4;
   --destructive-foreground: var(--kontron-white);
   --border: var(--kontron-gray-lighter);
   --input: transparent;
@@ -262,6 +264,9 @@
 .text-kontron-cyan {
   color: var(--kontron-cyan);
 }
+.text-kontron-destructive {
+  color: var(--kontron-destructive);
+}
 .bg-kontron-blue {
   background-color: var(--kontron-blue);
 }
@@ -282,6 +287,24 @@
 }
 .bg-kontron-green-pale {
   background-color: var(--kontron-green-pale);
+}
+.bg-kontron-magenta {
+  background-color: var(--kontron-magenta);
+}
+.bg-kontron-magenta-light {
+  background-color: var(--kontron-magenta-light);
+}
+.bg-kontron-magenta-pale {
+  background-color: var(--kontron-magenta-pale);
+}
+.bg-kontron-cyan {
+  background-color: var(--kontron-cyan);
+}
+.bg-kontron-destructive {
+  background-color: var(--kontron-destructive);
+}
+.bg-kontron-destructive-pale {
+  background-color: var(--destructive-pale);
 }
 
 /* Skeleton pulsing animation — works with any background (e.g. bg-accent, bg-kontron-blue-pale) */

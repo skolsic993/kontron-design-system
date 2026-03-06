@@ -576,20 +576,22 @@ export function Modals() {
               titleColor: "var(--kontron-green-dark)",
             },
             {
-              icon: <AlertCircle className="h-5 w-5 mt-0.5 text-yellow-600" />,
+              icon: (
+                <AlertCircle className="h-5 w-5 mt-0.5 text-kontron-magenta" />
+              ),
               title: "Warning",
               body: "Please review this warning message carefully.",
-              borderColor: "#EAB308",
-              bgClass: "bg-yellow-50",
-              titleColor: "#854D0E",
+              borderColor: "var(--kontron-magenta)",
+              bgClass: "bg-kontron-magenta-pale",
+              titleColor: "var(--kontron-magenta)",
             },
             {
-              icon: <XCircle className="h-5 w-5 mt-0.5 text-red-600" />,
+              icon: <XCircle className="h-5 w-5 mt-0.5 text-destructive" />,
               title: "Error",
               body: "An error occurred. Please try again.",
-              borderColor: "#EF4444",
-              bgClass: "bg-red-50",
-              titleColor: "#991B1B",
+              borderColor: "var(--destructive)",
+              bgClass: "bg-kontron-destructive-pale",
+              titleColor: "var(--destructive)",
             },
           ].map(({ icon, title, body, borderColor, bgClass, titleColor }) => (
             <div
