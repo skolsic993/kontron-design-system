@@ -4,6 +4,7 @@ import { Buttons } from "./design-system/Buttons";
 import { Cards } from "./design-system/Cards";
 import { ColorPalette } from "./design-system/ColorPalette";
 import { DashboardCards } from "./design-system/dashboard/DashboardCards";
+import { SidebarShowcase } from "./design-system/dashboard/SidebarShowcase";
 import { Forms } from "./design-system/Forms";
 import { Logo } from "./design-system/Logo";
 import { Modals } from "./design-system/Modals";
@@ -122,6 +123,11 @@ export function DesignSystemShowcase() {
                   id: "dashboard",
                   label: "Dashboard",
                   child: <DashboardCards />,
+                },
+                {
+                  id: "sidebars",
+                  label: "Sidebars",
+                  child: <SidebarShowcase />,
                 },
               ].map(({ id, label, child }) => (
                 <section key={id} id={id} className="mb-16">
