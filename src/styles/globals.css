@@ -350,12 +350,9 @@
   background-color: var(--kontron-dark);
 }
 
-[data-slot="button"][data-variant="outline"] {
-  color: var(--kontron-blue-light);
-}
-
 [data-slot="button"][data-variant="outline"]:hover {
-  color: var(--kontron-white);
+  background-color: var(--kontron-blue-pale);
+  color: var(--kontron-dark);
 }
 
 .dark [data-slot="button"][data-variant="outline"] {
@@ -364,19 +361,14 @@
 
 /* Active tab: distinct background so it’s visible (Tailwind data-[state=active] may not be in build) */
 [data-slot="tabs-trigger"][data-state="active"] {
-  background-color: var(--muted);
-  color: var(--foreground);
+  background-color: var(--kontron-blue);
+  color: var(--kontron-background);
 }
 
 @layer base {
   * {
     @apply outline-ring/50;
     border-color: var(--border);
-  }
-
-  /* Outline button border must win over *; use variable so it’s not overridden by base layer order */
-  [data-slot="button"].border {
-    border-color: var(--kontron-blue-light);
   }
 
   .dark [data-slot="button"].border {

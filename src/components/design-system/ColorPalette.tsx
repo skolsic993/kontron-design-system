@@ -46,8 +46,14 @@ export function ColorPalette() {
           var: "--kontron-magenta-light",
           hex: "#f266af",
         },
+        {
+          name: "Magenta Pale",
+          var: "--kontron-magenta-pale",
+          hex: "#f9ecf4",
+        },
         { name: "Cyan", var: "--kontron-cyan", hex: "#00BCD4" },
         { name: "Cyan Light", var: "--kontron-cyan-light", hex: "#66d9e8" },
+        { name: "Cyan Pale", var: "--kontron-cyan-pale", hex: "#e6f7f3" },
       ],
     },
   ];

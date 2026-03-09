@@ -417,7 +417,7 @@ export function Forms() {
           </span>
         </h3>
         <div className="space-y-4 bg-card p-6 rounded-lg shadow-sm">
-          <Alert className="flex items-start gap-4">
+          <Alert className="flex items-start gap-2">
             <Info className="h-4 w-4 text-kontron-magenta mt-0.5" />
 
             <div className="flex flex-col">
@@ -631,7 +631,7 @@ export function Forms() {
               </DialogHeader>
               <DialogFooter>
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
                 >
                   Cancel
@@ -951,7 +951,7 @@ export function Forms() {
               </Button>
               <Button
                 type="button"
-                variant="outline"
+                variant="ghost"
                 style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
               >
                 Cancel
@@ -1049,7 +1049,7 @@ export function Forms() {
               </Button>
               <Button
                 size="sm"
-                variant="outline"
+                variant="ghost"
                 style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
               >
                 Secondary
@@ -1062,7 +1062,7 @@ export function Forms() {
                 Submit
               </Button>
               <Button
-                variant="outline"
+                variant="ghost"
                 style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
               >
                 Cancel

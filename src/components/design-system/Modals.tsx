@@ -93,7 +93,7 @@ export function Modals() {
               </div>
               <DialogFooter>
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
                 >
                   Cancel
@@ -235,7 +235,7 @@ export function Modals() {
               </div>
               <DialogFooter>
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   style={{ fontFamily: "var(--font-primary)", fontWeight: 500 }}
                 >
                   Cancel
