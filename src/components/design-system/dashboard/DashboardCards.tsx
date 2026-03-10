@@ -79,7 +79,7 @@ export function DashboardCards() {
                     )}
                   </div>
                   <span
-                    className="text-xl text-muted-foreground truncate"
+                    className="text-xl truncate"
                     style={{
                       fontFamily: "var(--font-primary)",
                       fontWeight: 300,

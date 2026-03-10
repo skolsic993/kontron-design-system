@@ -1,4 +1,4 @@
-import { LayoutDashboard, LogOut, PanelLeftClose, Settings, Settings2, Users } from "lucide-react";
+import { PanelLeftClose } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 /* ─── Kontron SVG logo ─────────────────────────────────────────────────── */
@@ -10,7 +10,10 @@ function KontronLogo({ variant }: { variant: Variant }) {
       style={{ height: "20px", width: "auto" }}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <polygon fill={isDark ? "#3fb498" : "#3FB498"} points="14.1,0 0,0 0,51.5 14.1,33.1" />
+      <polygon
+        fill={isDark ? "#3fb498" : "#3FB498"}
+        points="14.1,0 0,0 0,51.5 14.1,33.1"
+      />
       <path
         fill={isDark ? "#ffffff" : "#005083"}
         d="M44,14.1l-14.8,19l14.5,18.4H27L14.1,33.1l14.5-18.9C28.6,14.2,44,14.1,44,14.1z
@@ -33,25 +36,25 @@ function KontronLogo({ variant }: { variant: Variant }) {
 }
 
 /* ─── Types ────────────────────────────────────────────────────────────── */
-type Variant = "light" | "blue" | "dark";
+type Variant = "light" | "dark";
 
 const menuGroups = [
   {
     key: "admin",
     label: "Admin",
-    icon: Settings2,
+
     items: ["Roles", "Configuration", "Area"],
   },
   {
     key: "dashboard",
     label: "Dashboard",
-    icon: LayoutDashboard,
+
     items: ["Dashboard"],
   },
   {
     key: "functional",
     label: "Functional Role",
-    icon: Users,
+
     items: [
       "Import",
       "Functional Roles",
@@ -80,38 +83,18 @@ type VariantTokens = {
 
 const tokens: Record<Variant, VariantTokens> = {
   light: {
-    sidebar: { background: "#ffffff", border: "1px solid #e5e7eb" },
-    header: { background: "#ffffff", borderBottom: "1px solid #e5e7eb" },
-    dividerColor: "#d1d5db",
-    groupIdle: { color: "#111827" },
-    groupOpen: { color: "#005083" },
-    groupHoverBg: "#f3f4f6",
-    subIdle: { color: "#6b7280" },
-    subActive: { color: "#005083", fontWeight: 500 },
-    subActiveBg: "rgba(0,80,131,0.07)",
-    footer: { borderTop: "1px solid #e5e7eb" },
-    footerItem: { color: "#6b7280" },
+    sidebar: { background: "#ffffff" },
+    header: { background: "#ffffff", borderBottom: "1px solid #e5f0f6" },
+    dividerColor: "",
+    groupIdle: { color: "#002a46" },
+    groupOpen: { color: "#002a46" },
+    groupHoverBg: "#e5f0f6",
+    subIdle: { color: "#002a46", fontWeight: 400, fontSize: "14px" },
+    subActive: { color: "#050316", fontWeight: 500, fontSize: "14px" },
+    subActiveBg: "#e5f0f6",
+    footer: { borderTop: "1px solid #e5f0f6" },
+    footerItem: { color: "#002a46" },
     label: "Light / Default",
-  },
-  blue: {
-    sidebar: {
-      background: "var(--kontron-blue-pale, #e8f4fb)",
-      border: "1px solid #b3d4e8",
-    },
-    header: {
-      background: "var(--kontron-blue-pale, #e8f4fb)",
-      borderBottom: "1px solid #b3d4e8",
-    },
-    dividerColor: "#93c5d8",
-    groupIdle: { color: "#1e4d6b" },
-    groupOpen: { color: "#005083" },
-    groupHoverBg: "rgba(0,80,131,0.08)",
-    subIdle: { color: "#4a7a9b" },
-    subActive: { color: "#005083", fontWeight: 500 },
-    subActiveBg: "rgba(0,80,131,0.13)",
-    footer: { borderTop: "1px solid #b3d4e8" },
-    footerItem: { color: "#4a7a9b" },
-    label: "Blue Accent",
   },
   dark: {
     sidebar: { background: "#1C1C1E", border: "1px solid #3a3a3d" },
@@ -130,7 +113,13 @@ const tokens: Record<Variant, VariantTokens> = {
 };
 
 /* ─── Animated collapsible ─────────────────────────────────────────────── */
-function Collapsible({ open, children }: { open: boolean; children: React.ReactNode }) {
+function Collapsible({
+  open,
+  children,
+}: {
+  open: boolean;
+  children: React.ReactNode;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(open ? "auto" : "0px");
   const [isVisible, setIsVisible] = useState(open);
@@ -219,42 +208,28 @@ function SidebarPreview({ variant }: { variant: Variant }) {
     <div
       style={{
         ...t.sidebar,
-        borderRadius: "12px",
-        width: "230px",
-        height: "460px",
+        width: "350px",
+        height: "700px",
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
-        boxShadow:
-          variant === "dark"
-            ? "0 4px 24px rgba(0,0,0,0.4)"
-            : "0 2px 16px rgba(0,0,0,0.08)",
         fontFamily: font,
-        fontSize: "13px",
         flexShrink: 0,
+        padding: "0 0.5rem",
       }}
+      className="shadow-sm rounded-lg"
     >
       {/* ── Header ── */}
       <div
         style={{
           ...t.header,
-          padding: "13px 14px",
+          padding: "1rem 0.8rem",
           display: "flex",
           alignItems: "center",
           gap: "10px",
         }}
       >
         <KontronLogo variant={variant} />
-
-        {/* vertical divider */}
-        <div
-          style={{
-            width: "1px",
-            height: "18px",
-            background: t.dividerColor,
-            flexShrink: 0,
-          }}
-        />
 
         <div style={{ flex: 1 }} />
 
@@ -271,7 +246,6 @@ function SidebarPreview({ variant }: { variant: Variant }) {
       {/* ── Nav ── */}
       <nav style={{ flex: 1, overflowY: "auto", padding: "6px 8px" }}>
         {menuGroups.map((group) => {
-          const Icon = group.icon;
           const isOpen = openGroups[group.key];
           const isHovered = hoveredGroup === group.key;
           const groupColor = isOpen
@@ -297,14 +271,14 @@ function SidebarPreview({ variant }: { variant: Variant }) {
                   textAlign: "left",
                   color: groupColor,
                   fontFamily: font,
-                  fontSize: "13px",
-                  fontWeight: isOpen ? 600 : 400,
                   borderRadius: "7px",
                   transition: "background 0.15s, color 0.15s",
                 }}
+                className="rounded-sm"
               >
-                <Icon size={15} style={{ flexShrink: 0 }} />
-                <span style={{ flex: 1 }}>{group.label}</span>
+                <span style={{ flex: 1 }} className="text-base">
+                  {group.label}
+                </span>
                 <Chevron open={isOpen} color={groupColor} />
               </button>
 
@@ -328,13 +302,12 @@ function SidebarPreview({ variant }: { variant: Variant }) {
                           background: isActive
                             ? t.subActiveBg
                             : isItemHovered
-                            ? t.groupHoverBg
-                            : "transparent",
+                              ? t.groupHoverBg
+                              : "transparent",
                           border: "none",
                           cursor: "pointer",
                           textAlign: "left",
                           fontFamily: font,
-                          fontSize: "13px",
                           borderRadius: "7px",
                           transition: "background 0.12s",
                           ...(isActive ? t.subActive : t.subIdle),
@@ -353,10 +326,7 @@ function SidebarPreview({ variant }: { variant: Variant }) {
 
       {/* ── Footer ── */}
       <div style={{ ...t.footer, padding: "10px 8px" }}>
-        {[
-          { icon: Settings, label: "Settings" },
-          { icon: LogOut, label: "Logout" },
-        ].map(({ icon: Icon, label }) => (
+        {[{ label: "Settings" }, { label: "Logout" }].map(({ label }) => (
           <button
             key={label}
             style={{
@@ -369,12 +339,10 @@ function SidebarPreview({ variant }: { variant: Variant }) {
               border: "none",
               cursor: "pointer",
               fontFamily: font,
-              fontSize: "13px",
               borderRadius: "7px",
               ...t.footerItem,
             }}
           >
-            <Icon size={14} />
             {label}
           </button>
         ))}
@@ -387,8 +355,8 @@ function SidebarPreview({ variant }: { variant: Variant }) {
 export function SidebarShowcase() {
   return (
     <div className="space-y-8">
-      <div className="flex gap-8 flex-wrap items-start">
-        {(["light", "blue", "dark"] as Variant[]).map((variant) => (
+      <div className="flex gap-6 flex-wrap items-start">
+        {(["light", "dark"] as Variant[]).map((variant) => (
           <div key={variant} className="flex flex-col items-center gap-3">
             <SidebarPreview variant={variant} />
             <span
